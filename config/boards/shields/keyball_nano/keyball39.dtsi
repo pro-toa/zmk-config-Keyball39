@@ -81,6 +81,15 @@
 			, <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
+
+    // trackball settings
+    behavior.pointer_move {
+        compatible = "zmk,behavior-pointer-move";
+        speed = <2.0>;           // 基本速度（1.0がデフォルト）
+        acceleration = <1.5>;    // 加速の度合い（1.0がデフォルト）
+        scale = <1>;             // DPI的な倍率（1.0がデフォルト）
+        snapping = <false>;      // 微細な補正を無効化
+    };
 };    
 
 &pinctrl {
@@ -122,13 +131,4 @@
         inversion-on;
         prechargep = <0x22>;
     };
-};
-
-// trackball settings
-behavior.pointer_move {
-    compatible = "zmk,behavior-pointer-move";
-    speed = <2.0>;           // 基本速度（1.0がデフォルト）
-    acceleration = <1.5>;    // 加速の度合い（1.0がデフォルト）
-    scale = <1>;             // DPI的な倍率（1.0がデフォルト）
-    snapping = <false>;      // 微細な補正を無効化
 };
