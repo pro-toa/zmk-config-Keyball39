@@ -85,9 +85,9 @@
     // trackball settings
     behavior.pointer_move {
         compatible = "zmk,behavior-pointer-move";
-        speed = <2.0>;           // 基本速度（1.0がデフォルト）
-        acceleration = <1.5>;    // 加速の度合い（1.0がデフォルト）
-        scale = <1>;             // DPI的な倍率（1.0がデフォルト）
+        speed = <2>;           // 基本速度（1がデフォルト）
+        acceleration = <2>;    // 加速の度合い（1がデフォルト）
+        scale = <1>;             // DPI的な倍率（1がデフォルト）
         snapping = <false>;      // 微細な補正を無効化
     };
 };    
