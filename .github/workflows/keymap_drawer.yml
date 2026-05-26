@@ -1,37 +1,25 @@
 name: Draw ZMK keymaps
+
 on:
   workflow_dispatch:
   push:
     paths:
-      - ".github/workflows/keymap_draser.yml"
+      - ".github/workflows/keymap_drawer.yml"
       - "keymap_drawer.config.yaml"
       - "config/**"
 
 jobs:
   draw:
-    runs-on: ubuntu-latest
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.22.1
     permissions:
       contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install keymap-drawer
-        run: |
-          pipx install keymap-drawer==0.22.0
-          pipx runpip keymap-drawer install --force-reinstall "tree-sitter==0.24.0"
-          pipx install west
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-      - name: Fetch west modules
-        run: |
-          west init -l config
-          west update
-      - name: Draw keymaps
-        run: |
-          keymap parse -c 10 -z config/keyball39.keymap > config/keyball39.yaml
-          keymap draw -c keymap_drawer.config.yaml config/keyball39.yaml > keymap-drawer/keyball39.svg
-      - name: Commit generated keymaps
-        run: |
-          git config --global user.name github-actions
-          git config --global user.email github-actions@github.com
-          git add keymap-drawer/*.svg config/*.yaml
-          git diff --cached --quiet || git commit -m "Auto-update keymap drawings"
-          git push
+    with:
+      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
+      amend_commit: false
+      install_branch: ""
+      install_version: "0.22.1"
+      keymap_patterns: "config/*.keymap"
+      json_path: "config"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
+      destination: "both"
