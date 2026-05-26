@@ -129,8 +129,8 @@ layers:
   - '7'
   - '8'
   - '9'
-  - '0'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: /, s: '?'}
+  - '*'
   - F6
   - F7
   - F8
@@ -139,8 +139,8 @@ layers:
   - '4'
   - '5'
   - '6'
-  - {t: ., s: '>'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - +
+  - {t: '-', s: _}
   - F11
   - F12
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -149,17 +149,17 @@ layers:
   - '1'
   - '2'
   - '3'
-  - {t: '=', s: +}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: ., s: '>'}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:bluetooth-off$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - '0'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   MOUSE:
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
