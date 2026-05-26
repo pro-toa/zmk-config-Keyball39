@@ -1,8 +1,7 @@
-#define DEFAULT 0
-#define NAV     1
-#define SYM     2
-#define NUMFUNC 3
-#define MOUSE   4
+#define MAIN 0
+#define MOVE 1
+#define SYM  2
+#define NMF  3
 
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
@@ -25,7 +24,7 @@
 &caps_word { continue-list = <UNDERSCORE MINUS>; };
 
 / {
-    // custom shift using mod-morph 
+    // custom shift using mod-morph
 
     behaviors {
         cmqus: comma_question {
@@ -59,22 +58,22 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            label = "QWRT";
+        main_layer {
+            label = "MAIN";
             bindings = <
-&kp Q      &kp W         &kp E     &kp R       &kp T                                              &kp Y              &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D     &kp F       &kp G                                              &kp H              &kp J  &kp K      &kp L    &kp SEMI
-&kp Z      &kp X         &kp C     &kp V       &kp B                                              &kp N              &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LALT  &kp ESCAPE  &lt MOUSE SPACE  &lt NUMFUNC LA(GRAVE)  &kp ENTER  &lt SYM BACKSPACE                             &kp RSHFT
+&kp Q        &kp W         &kp E     &kp R       &kp T                                       &kp Y              &kp U  &kp I      &kp O    &kp P
+&mt LCTRL A  &kp S         &kp D     &kp F       &kp G                                       &kp H              &kp J  &kp K      &kp L    &kp SEMI
+&mt LSHFT Z  &kp X         &kp C     &kp V       &kp B                                       &kp N              &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL    &kp LEFT_WIN  &kp LALT  &kp ESCAPE  &lt MOVE ESCAPE  &lt NMF LA(GRAVE)  &kp SPACE  &lt SYM BACKSPACE                         &kp ENTER
             >;
         };
 
-        nav_layer {
-            label = "NAV";
+        move_layer {
+            label = "MOVE";
             bindings = <
-&none     &none     &none         &none      &none                   &none           &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP
-&kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none                   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none     &none     &none         &none      &none                   &none           &kp PAGE_DOWN   &none         &none            &none
+&none     &none     &none         &none      &none                   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none                   &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &none
+&none     &none     &none         &none      &none                   &kp PAGE_DOWN   &kp HOME        &none         &kp END          &none
 &trans    &trans    &trans        &trans     &trans  &trans  &trans  &trans                                                         &trans
             >;
         };
@@ -89,23 +88,13 @@
             >;
         };
 
-        numfunc_layer {
-            label = "NUMF";
+        nmf_layer {
+            label = "NMF";
             bindings = <
 &kp F1      &kp F2   &kp F3        &kp F4        &kp F5                              &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH  &kp ASTERISK
 &kp F6      &kp F7   &kp F8        &kp F9        &kp F10                             &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &kp MINUS
 &kp F11     &kp F12  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2                        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &kp ENTER
 &bt BT_CLR  &none    &bootloader   &trans        &trans        &trans  &kp NUMBER_0  &trans                                               &kp ENTER
-            >;
-        };
-
-        mouse_layer {
-            label = "MOUSE";
-            bindings = <
-&kp N1          &kp N2          &kp N3        &kp N4     &kp N5                  &kp N6         &kp N7     &kp N8  &kp N9     &kp N0
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none                   &kp PAGE_UP    &mkp LCLK  &none   &mkp RCLK  &mkp MCLK
-&none           &none           &none         &none      &none                   &kp PAGE_DOWN  &none      &none   &none      &none
-&none           &trans          &trans        &trans     &trans  &trans  &trans  &mo NUMFUNC                                  &none
             >;
         };
     };
