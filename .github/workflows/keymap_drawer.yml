@@ -12,13 +12,13 @@ permissions:
 
 jobs:
   draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.16.1
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.21.0
     permissions:
       contents: write
     with:
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
       amend_commit: false
-      install_branch: "v0.16.1"
+      install_branch: "v0.21.0"
       keymap_patterns: "config/*.keymap"
       json_path: "config"
       config_path: "keymap_drawer.config.yaml" # config file, ignored if not exists
