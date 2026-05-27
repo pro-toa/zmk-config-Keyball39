@@ -27,7 +27,7 @@
     // custom shift using mod-morph
 
     behaviors {
-        kp_ht: kp_ht {
+        kp_ht: keypress_holdtap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -35,14 +35,14 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
         };
-    };
 
-    macros {
-        Hiragana: Hiragana {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>;
-            label = "HIRAGANA";
+        lt_tog: layer_toggle_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&tog>, <&kp>;
         };
     };
 
@@ -52,10 +52,10 @@
         main_layer {
             label = "MAIN";
             bindings = <
-&kp Q        &kp W     &kp E     &kp R      &kp T                                &kp_ht LPAR Y  &kp_ht RPAR U  &kp I      &kp O    &kp_ht TAB P
-&mt CAPS A   &kp S     &kp D     &kp F      &kp G                                &kp_ht LBKT H  &kp_ht RBKT J  &kp K      &kp L    &kp MINUS
-&mt LSHFT Z  &kp X     &kp C     &kp V      &kp B                                &kp N          &kp M          &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL    &kp LWIN  &kp LALT  &lt 3 ESC  &lt 2 SPACE  &lt 1 GRAVE  &kp ENTER  &kp BSPC                                          &kp DEL
+&kp Q        &kp W     &kp E     &kp R          &kp T                                        &kp_ht LPAR Y  &kp_ht RPAR U  &kp I      &kp O    &kp_ht TAB P
+&mt CAPS A   &kp S     &kp D     &kp F          &kp G                                        &kp_ht LBKT H  &kp_ht RBKT J  &kp K      &kp L    &kp MINUS
+&mt LSHFT Z  &kp X     &kp C     &kp V          &kp B                                        &kp N          &kp M          &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL    &kp LWIN  &kp LALT  &lt_tog 3 ESC  &lt_tog 2 SPACE  &lt_tog 1 GRAVE  &kp ENTER  &kp BSPC                                          &kp DEL
             >;
         };
 
