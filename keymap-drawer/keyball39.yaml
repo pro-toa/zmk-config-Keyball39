@@ -6,8 +6,8 @@ layers:
   - E
   - R
   - T
-  - Y
-  - U
+  - '&y_lpar'
+  - '&u_rpar'
   - I
   - O
   - P
@@ -16,11 +16,11 @@ layers:
   - D
   - F
   - G
-  - H
-  - J
+  - '&h_lbkt'
+  - '&j_rbkt'
   - K
   - L
-  - {t: ;, s: ':'}
+  - {t: '-', s: _}
   - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - X
   - C
@@ -30,7 +30,7 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - '&slash_del'
   - $$mdi:apple-keyboard-control$$
   - LEFT WIN
   - $$mdi:apple-keyboard-option$$
