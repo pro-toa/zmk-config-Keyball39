@@ -1,7 +1,7 @@
 #define MAIN 0
-#define MOVE 1
+#define NMF  1
 #define SYM  2
-#define NMF  3
+#define MOVE 3
 
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
@@ -27,54 +27,13 @@
     // custom shift using mod-morph
 
     behaviors {
-        y_lpar: y_lpar {
+        kp_ht: kp_ht {
             compatible = "zmk,behavior-hold-tap";
-            label = "Y_LPAR";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
+            flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&kp LPAR>, <&kp Y>;
-        };
-
-        u_rpar: u_rpar {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_RPAR";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&kp RPAR>, <&kp U>;
-        };
-
-        h_lbkt: h_lbkt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "H_LBKT";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&kp LBKT>, <&kp H>;
-        };
-
-        j_rbkt: j_rbkt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "J_RBKT";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&kp RBKT>, <&kp J>;
-        };
-
-        slash_del: slash_del {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SLASH_DEL";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&kp DEL>, <&kp SLASH>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -93,20 +52,10 @@
         main_layer {
             label = "MAIN";
             bindings = <
-&kp Q        &kp W         &kp E     &kp R       &kp T                                 &y_lpar          &u_rpar  &kp I      &kp O    &kp P
-&mt CAPS A   &kp S         &kp D     &kp F       &kp G                                 &h_lbkt          &j_rbkt  &kp K      &kp L    &kp MINUS
-&mt LSHFT Z  &kp X         &kp C     &kp V       &kp B                                 &kp N            &kp M    &kp COMMA  &kp DOT  &slash_del
-&kp LCTRL    &kp LEFT_WIN  &kp LALT  &kp ESCAPE  &lt 1 ESCAPE  &lt 3 GRAVE  &kp SPACE  &lt 2 BACKSPACE                               &kp ENTER
-            >;
-        };
-
-        move_layer {
-            label = "MOVE";
-            bindings = <
-&none     &none     &none         &none      &none                   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none                   &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &none
-&none     &none     &none         &none      &none                   &kp PAGE_DOWN   &kp HOME        &none         &kp END          &none
-&trans    &trans    &trans        &trans     &trans  &trans  &trans  &trans                                                         &trans
+&kp Q        &kp W         &kp E     &kp R       &kp T         &kp_ht LPAR Y  &kp_ht RPAR U  &kp I            &kp O    &kp P
+&mt CAPS A   &kp S         &kp D     &kp F       &kp G         &kp_ht LBKT H  &kp_ht RBKT J  &kp K            &kp L    &kp MINUS
+&mt LSHFT Z  &kp X         &kp C     &kp V       &kp B         &kp N          &kp M          &kp COMMA        &kp DOT  &kp_ht DEL SLASH
+&kp LCTRL    &kp LEFT_WIN  &kp LALT  &kp ESCAPE  &lt 3 ESCAPE  &lt 1 GRAVE    &kp SPACE      &lt 2 BACKSPACE           &kp ENTER
             >;
         };
 
@@ -127,6 +76,16 @@
 &kp F6      &kp F7   &kp F8        &kp F9        &kp F10                             &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &kp MINUS
 &kp F11     &kp F12  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2                        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &kp ENTER
 &bt BT_CLR  &none    &bootloader   &trans        &trans        &trans  &kp NUMBER_0  &trans                                               &kp ENTER
+            >;
+        };
+
+        move_layer {
+            label = "MOVE";
+            bindings = <
+&none     &none     &none         &none      &none                   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none                   &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &none
+&none     &none     &none         &none      &none                   &kp PAGE_DOWN   &kp HOME        &none         &kp END          &none
+&trans    &trans    &trans        &trans     &trans  &trans  &trans  &trans                                                         &trans
             >;
         };
     };
