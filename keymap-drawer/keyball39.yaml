@@ -6,8 +6,8 @@ layers:
   - E
   - R
   - T
-  - '&y_lpar'
-  - '&u_rpar'
+  - {t: Y, h: (}
+  - {t: U, h: )}
   - I
   - O
   - P
@@ -16,8 +16,8 @@ layers:
   - D
   - F
   - G
-  - '&h_lbkt'
-  - '&j_rbkt'
+  - {t: H, h: '['}
+  - {t: J, h: ']'}
   - K
   - L
   - {t: '-', s: _}
@@ -30,15 +30,95 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - '&slash_del'
+  - {t: /, h: '$$mdi:backspace-reverse-outline$$', s: '?'}
   - $$mdi:apple-keyboard-control$$
   - LEFT WIN
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-esc$$', h: MOVE}
-  - {t: '`', h: NMF, s: '~'}
+  - {t: '`', h: SYM, s: '~'}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:backspace$$', h: SYM}
+  - {t: '$$mdi:backspace$$', h: NMF}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  SYM:
+  - {t: '`', s: '~'}
+  - '#'
+  - '*'
+  - _
+  - {t: '-', s: _}
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - '!'
+  - '@'
+  - $
+  - '%'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '-', s: _}
+  - {t: '=', s: +}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: '''', s: '"'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - _
+  - +
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - \
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  NMF:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - '7'
+  - '8'
+  - '9'
+  - {t: /, s: '?'}
+  - '*'
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - {t: '-', s: _}
+  - F11
+  - F12
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - '1'
+  - '2'
+  - '3'
+  - {t: ., s: '>'}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '0'
+  - {type: held}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   MOVE:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -80,83 +160,3 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  SYM:
-  - {t: '`', s: '~'}
-  - '#'
-  - '*'
-  - _
-  - {t: '-', s: _}
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - '!'
-  - '@'
-  - $
-  - '%'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '-', s: _}
-  - {t: '=', s: +}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - {t: '''', s: '"'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - _
-  - +
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - \
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  NMF:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - '7'
-  - '8'
-  - '9'
-  - {t: /, s: '?'}
-  - '*'
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - '4'
-  - '5'
-  - '6'
-  - +
-  - {t: '-', s: _}
-  - F11
-  - F12
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - '1'
-  - '2'
-  - '3'
-  - {t: ., s: '>'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:bluetooth-off$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:progress-download$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - '0'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
