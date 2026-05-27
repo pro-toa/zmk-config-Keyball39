@@ -1,7 +1,7 @@
 #define MAIN 0
-#define NMF  1
-#define SYM  2
-#define MOVE 3
+#define SYM  1
+#define NUM  2
+#define FNMV 3
 
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
@@ -52,20 +52,10 @@
         main_layer {
             label = "MAIN";
             bindings = <
-&kp Q        &kp W     &kp E     &kp R    &kp T                                &kp_ht LPAR Y  &kp_ht RPAR U  &kp I      &kp O    &kp P
-&mt CAPS A   &kp S     &kp D     &kp F    &kp G                                &kp_ht LBKT H  &kp_ht RBKT J  &kp K      &kp L    &kp MINUS
-&mt LSHFT Z  &kp X     &kp C     &kp V    &kp B                                &kp N          &kp M          &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL    &kp LWIN  &kp LALT  &kp ESC  &lt 1 SPACE  &lt 2 GRAVE  &kp ENTER  &lt 3 BSPC                                         &kp DEL
-            >;
-        };
-
-        nmf_layer {
-            label = "NMF";
-            bindings = <
-&kp F1      &kp F2   &kp F3        &kp F4        &kp F5                        &kp N7          &kp N8  &kp N9  &kp SLASH  &kp ASTRK
-&kp F6      &kp F7   &kp F8        &kp F9        &kp F10                       &kp N4          &kp N5  &kp N6  &kp PLUS   &trans
-&kp F11     &kp F12  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2                  &kp N1          &kp N2  &kp N3  &kp DOT    &trans
-&bt BT_CLR  &none    &bootloader   &trans        &trans        &trans  &trans  &kp_ht BSPC N0                             &trans
+&kp Q        &kp W     &kp E     &kp R      &kp T                                &kp_ht LPAR Y  &kp_ht RPAR U  &kp I      &kp O    &kp_ht TAB P
+&mt CAPS A   &kp S     &kp D     &kp F      &kp G                                &kp_ht LBKT H  &kp_ht RBKT J  &kp K      &kp L    &kp MINUS
+&mt LSHFT Z  &kp X     &kp C     &kp V      &kp B                                &kp N          &kp M          &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL    &kp LWIN  &kp LALT  &lt 3 ESC  &lt 2 SPACE  &lt 1 GRAVE  &kp ENTER  &kp BSPC                                          &kp DEL
             >;
         };
 
@@ -79,13 +69,23 @@
             >;
         };
 
-        move_layer {
-            label = "MOVE";
+        number_layer {
+            label = "NUM";
             bindings = <
-&none      &none      &none     &none     &none                   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp TAB
-&kp LCTRL  &kp LSHFT  &kp LALT  &kp LWIN  &none                   &kp PG_UP  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none
-&none      &none      &none     &none     &none                   &kp PG_DN  &kp HOME   &none      &kp END    &none
-&trans     &trans     &trans    &trans    &trans  &trans  &trans  &trans                                      &trans
+&none      &none   &none   &none   &none                      &kp N7          &kp N8  &kp N9  &kp ASTRK  &kp_ht TAB SLASH
+&none      &none   &none   &none   &none                      &kp N4          &kp N5  &kp N6  &kp PLUS   &kp MINUS
+&kp LCTRL  &none   &none   &none   &none                      &kp N1          &kp N2  &kp N3  &kp DOT    &kp NUBS
+&trans     &trans  &trans  &trans  &trans  &trans  &kp ENTER  &kp_ht BSPC N0                             &kp EQUAL
+            >;
+        };
+
+        function_and_move_layer {
+            label = "FNMV";
+            bindings = <
+&kp F1      &kp F2   &kp F3        &kp F4        &kp F5                        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
+&kp F6      &kp F7   &kp F8        &kp F9        &kp F10                       &kp PG_UP  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none
+&kp F11     &kp F12  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2                  &kp PG_DN  &kp HOME   &none      &kp END    &none
+&bt BT_CLR  &none    &bootloader   &trans        &trans        &trans  &trans  &trans                                      &trans
             >;
         };
     };
