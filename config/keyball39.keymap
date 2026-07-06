@@ -21,40 +21,7 @@
     quick-tap-ms = <150>;
 };
 
-&caps_word { continue-list = <UNDERSCORE MINUS>; };
-
 / {
-    // custom shift using mod-morph
-
-    behaviors {
-        cmqus: comma_question {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_QUESTION";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp QUESTION>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        dtsmi: dot_semi {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_SEMI";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp SEMI>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-
-    macros {
-        Hiragana: Hiragana {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>;
-            label = "HIRAGANA";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -64,7 +31,7 @@
 &kp Q        &kp W         &kp E     &kp R       &kp T                                     &kp Y            &kp U  &kp I      &kp O    &kp P
 &mt LCTRL A  &kp S         &kp D     &kp F       &kp G                                     &kp H            &kp J  &kp K      &kp L    &kp SEMI
 &mt LSHFT Z  &kp X         &kp C     &kp V       &kp B                                     &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL    &kp LEFT_WIN  &kp LALT  &kp ESCAPE  &lt 1 ESCAPE  &lt 3 LA(GRAVE)  &kp SPACE  &lt 2 BACKSPACE                             &kp ENTER
+&kp LCTRL    &kp LEFT_WIN  &kp LALT  &kp ESCAPE  &lt MOVE ESCAPE  &lt NMF LA(GRAVE)  &kp SPACE  &lt SYM BACKSPACE                             &kp ENTER
             >;
         };
 
