@@ -10,12 +10,13 @@ Firmware: *[Amos698](https://github.com/Amos698)* <br>
 ## Keymap notes
 
 - `MAIN`: Base QWERTY layer.
-- `MOVE`: Navigation and mouse-click helper layer.
+- `MOVE`: Keyboard navigation layer.
 - `SYM`: Symbols and brackets.
-- `NMF`: Numbers, function keys, and system controls.
+- `NUM`: Number pad layer.
+- `MOUSE`: Auto-mouse click helper layer for the PMW3610 trackball.
+- `SCROLL`: Trackball scroll mode.
+- `SNIPE`: Trackball precision mode.
+- `FN`: Function keys.
+- `SYS`: Bluetooth and bootloader controls.
 
-Planned cleanup:
-
-- Split `NMF` into safer `NUM`, `FN`, and `SYS` layers.
-- Move Bluetooth and bootloader actions away from frequently used positions.
-- Decide how to use the PMW3610 `automouse-layer`, `scroll-layers`, and `snipe-layers` settings before adding layers 4-6.
+System controls are isolated behind `FN` + `SYS` to avoid accidental Bluetooth channel changes.
