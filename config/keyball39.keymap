@@ -14,7 +14,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 &lt {
-    tapping-term-ms = <240>;
+    tapping-term-ms = <200>;
     flavor = "hold-preferred";
     quick-tap-ms = <150>;
 };
@@ -34,7 +34,7 @@
             bindings = <
 &kp Q      &kp W         &kp E     &kp R         &kp T                                &kp Y          &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D     &kp F         &kp G                                &kp H          &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C     &kp V         &kp B                                &kp N          &kp M  &kp COMMA  &kp DOT  &kp ESCAPE
+&kp Z      &kp X         &kp C     &kp V         &kp B                                &kp N          &kp M  &kp COMMA  &kp DOT  &lt 1 ESCAPE
 &kp LCTRL  &kp LEFT_WIN  &kp LALT  &kp LSHFT  &kp SPACE  &lt 1 TAB  &kp ENTER  &kp BACKSPACE                             &lt 4 GRAVE
             >;
         };
