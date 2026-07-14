@@ -26,6 +26,18 @@
 };
 
 / {
+    behaviors {
+        toggle_mouse_layer: toggle_mouse_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "toggle_mouse_layer";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <150>;
+            bindings = <&tog>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -34,8 +46,8 @@
             bindings = <
 &kp Q      &kp W         &kp E     &kp R         &kp T                                &kp Y          &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D     &kp F         &kp G                                &kp H          &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C     &kp V         &kp B                                &kp N          &kp M  &kp COMMA  &kp DOT  &lt 1 ESCAPE
-&kp LCTRL  &kp LEFT_WIN  &kp LALT  &kp LSHFT  &kp SPACE  &lt 1 TAB  &kp ENTER  &kp BACKSPACE                             &lt 4 GRAVE
+&kp Z      &kp X         &kp C     &kp V         &kp B                                &kp N          &kp M  &kp COMMA  &kp DOT  &toggle_mouse_layer 1 ESCAPE
+&kp LCTRL  &kp LEFT_WIN  &kp LALT  &kp LSHFT  &kp SPACE  &toggle_mouse_layer 1 TAB  &kp ENTER  &kp BACKSPACE                             &lt 4 GRAVE
             >;
         };
 
@@ -75,7 +87,7 @@
 &kp EXCLAMATION  &kp DOUBLE_QUOTES   &kp HASH     &kp DOLLAR    &kp PERCENT               &kp AMPERSAND  &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
 &kp AT_SIGN      &kp DOLLAR   &kp PERCENT  &kp QUESTION     &kp MINUS                &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ASTERISK  &kp UNDERSCORE  &kp PLUS
 &kp LT    &kp GT   &kp PIPE      &kp COLON      &kp SEMICOLON                    &kp UNDERSCORE  &kp PLUS       &kp DOUBLE_QUOTES        &kp TILDE                &kp NON_US_BACKSLASH
-&trans           &trans       &trans        &trans          &trans     &trans  &mo 5  &mo 6                                                                  &trans
+&trans           &trans       &trans        &trans          &trans     &trans  &mo 5  &mo 6                                                                  &kp UNDERSCORE
             >;
         };
 
