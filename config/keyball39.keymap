@@ -34,47 +34,47 @@
             bindings = <
 &kp Q      &kp W         &kp E     &kp R         &kp T                                &kp Y          &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D     &kp F         &kp G                                &kp H          &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C     &kp V         &kp B                                &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LALT  &lt 4 ESCAPE  &kp SPACE  &kp LA(GRAVE)  &kp ENTER  &kp BACKSPACE                             &kp LSHFT
+&kp Z      &kp X         &kp C     &kp V         &kp B                                &kp N          &kp M  &kp COMMA  &kp DOT  &kp ESCAPE
+&kp LCTRL  &kp LEFT_WIN  &kp LALT  &kp LSHFT  &kp SPACE  &lt 1 TAB  &kp ENTER  &kp BACKSPACE                             &lt 4 GRAVE
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans     &trans     &trans     &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&none     &none     &none     &none  &none                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
 &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 2   &mo 3                   &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &none
-&trans     &trans     &trans     &trans  &trans                  &kp PAGE_DOWN   &kp HOME        &none         &kp END          &none
-&trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans                                                         &none
+&none     &none     &none     &none  &none                  &kp PAGE_DOWN   &kp HOME        &none         &kp END          &none
+&none     &none     &none     &none  &none  &none  &none  &none                                                         &none
             >;
         };
 
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans     &trans     &trans     &trans  &trans                  &trans         &trans     &trans     &trans     &trans
-&mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &mo 3                   &kp PAGE_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans
-&trans     &trans     &trans     &trans  &trans                  &kp PAGE_DOWN  &trans     &trans     &trans     &trans
-&trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans                                          &trans
+&none     &none     &none     &none  &none                  &none         &none     &none     &none     &none
+&mkp LCLK  &mkp MCLK  &mkp RCLK  &none  &mo 3                   &kp PAGE_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &none
+&none     &none     &none     &none  &none                  &kp PAGE_DOWN  &none     &none     &none     &none
+&none     &none     &none     &none  &none  &none  &none  &none                                          &none
             >;
         };
 
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&trans     &trans     &trans     &trans  &trans                  &trans         &trans     &trans     &trans     &trans
-&mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 2   &trans                  &kp PAGE_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans
-&trans     &trans     &trans     &trans  &trans                  &kp PAGE_DOWN  &trans     &trans     &trans     &trans
-&trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans                                          &trans
+&none     &none     &none     &none  &none                  &none         &none     &none     &none     &none
+&mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 2   &none                  &kp PAGE_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &none
+&none     &none     &none     &none  &none                  &kp PAGE_DOWN  &none     &none     &none     &none
+&none     &none     &none     &none  &none  &none  &none  &none                                          &none
             >;
         };
 
         symbol_layer {
             label = "SYM";
             bindings = <
-&kp GRAVE        &kp HASH     &kp ASTERISK  &kp UNDERSCORE  &kp MINUS                 &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp EXCLAMATION  &kp AT_SIGN  &kp DOLLAR    &kp PERCENT     &trans                    &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp SQT
-&trans           &trans       &trans        &trans          &trans                    &kp UNDERSCORE  &kp PLUS       &trans            &trans                &kp NON_US_BACKSLASH
+&kp EXCLAMATION  &kp DQUOTE   &kp HASH     &kp DOLLAR    &kp PERCENT               &kp AMPERSAND  &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
+&kp AT_SIGN      &kp DOLLAR   &kp PERCENT  &kp QUESTION     &kp MINUS                &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ASTERISK  &kp UNDERSCORE  &kp PLUS
+&kp LESS         &kp GREATER   &kp PIPE      &kp COLON      &kp SEMICOLON                    &kp UNDERSCORE  &kp PLUS       &kp DQUOTE        &kp TILDE                &kp NON_US_BACKSLASH
 &trans           &trans       &trans        &trans          &trans     &trans  &mo 5  &mo 6                                                                  &trans
             >;
         };
