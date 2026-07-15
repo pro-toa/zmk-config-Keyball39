@@ -23,7 +23,7 @@ static void draw_status_screen(void)
     };
 
     const uint8_t data[] = {0x00, 0x00, 0x00, 0x00};
-    display_write(display_dev, 0, 0, &desc, data, sizeof(data));
+    display_write(display_dev, 0, 0, &desc, data);
 }
 
 static int keyball39_display_init(void)
