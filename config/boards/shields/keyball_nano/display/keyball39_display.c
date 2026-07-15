@@ -2,14 +2,10 @@
 #include <zephyr/device.h>
 #include <zephyr/drivers/display.h>
 #include <zephyr/logging/log.h>
-#include <zmk/event-manager.h>
-#include <zmk/events/layer.h>
-#include <zmk/keymap.h>
 
 LOG_MODULE_REGISTER(keyball39_display, LOG_LEVEL_INF);
 
 static const struct device *display_dev;
-static int current_layer = 0;
 
 static void draw_status_screen(void)
 {
@@ -18,23 +14,7 @@ static void draw_status_screen(void)
     }
 
     display_blanking_off(display_dev);
-
-    if (current_layer == 1) {
-        display_write(display_dev, 0, 0, 16, "MOUSE ACTIVE", 12);
-    } else {
-        display_write(display_dev, 0, 0, 16, "MAIN", 4);
-    }
-}
-
-static void layer_state_changed(const struct zmk_event_header *eh)
-{
-    struct zmk_layer_state_changed *event = CONTAINER_OF(eh, struct zmk_layer_state_changed, header);
-    current_layer = event->layer;
-    draw_status_screen();
-}
-
-ZMK_EVENT_CONSUMER(layer_state_changed) {
-    return zmk_layer_state_changed_from_state(event);
+    display_write(display_dev, 0, 0, 16, "MOUSE ACTIVE", 12);
 }
 
 static int keyball39_display_init(void)
