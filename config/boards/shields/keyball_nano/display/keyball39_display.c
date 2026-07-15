@@ -20,9 +20,9 @@ static void draw_status_screen(void)
     display_blanking_off(display_dev);
 
     if (current_layer == 1) {
-        LOG_INF("MOUSE layer active");
+        display_write(display_dev, 0, 0, 16, "MOUSE ACTIVE", 12);
     } else {
-        LOG_INF("Layer: %d", current_layer);
+        display_write(display_dev, 0, 0, 16, "MAIN", 4);
     }
 }
 
