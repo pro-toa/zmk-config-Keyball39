@@ -19,10 +19,11 @@ static void draw_status_screen(void)
         .width = 16,
         .height = 16,
         .pitch = 16,
+        .buf_size = 16 * 16 / 8,
     };
 
     const uint8_t data[] = {0x00, 0x00, 0x00, 0x00};
-    display_write(display_dev, &desc, data, sizeof(data));
+    display_write(display_dev, 0, 0, &desc, data, sizeof(data));
 }
 
 static int keyball39_display_init(void)
