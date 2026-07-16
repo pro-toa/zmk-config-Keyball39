@@ -54,40 +54,40 @@
         mouse_layer {
             label = "MOUSE MODE";
             bindings = <
-&trans     &trans     &trans     &trans     &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mo 2
-&trans     &trans     &trans     &trans     &trans                  &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &none
-&trans     &trans     &trans     &trans     &trans                  &kp PAGE_DOWN   &kp HOME        &none         &kp END          &trans
-&trans     &trans     &trans     &trans     &trans  &trans  &trans  &trans                                                         &trans
+&trans  &trans  &trans  &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mo 2
+&trans  &trans  &trans  &trans  &trans                  &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &mo 3
+&trans  &trans  &trans  &trans  &trans                  &kp PAGE_DOWN   &kp HOME        &none         &kp END          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans
             >;
         };
 
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&none      &none      &none      &none   &none                   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans                   &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK       &none
-&none      &none      &none      &none   &none                   &kp PAGE_DOWN   &kp HOME        &none         &kp END          &trans
-&trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans                                                         &mo 3
+&trans  &trans  &trans  &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mo 2
+&trans  &trans  &trans  &trans  &trans                  &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &mo 3
+&trans  &trans  &trans  &trans  &trans                  &kp PAGE_DOWN   &kp HOME        &none         &kp END          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans
             >;
         };
 
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&none      &none      &none      &none   &none                   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans                   &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK       &none
-&none      &none      &none      &none   &none                   &kp PAGE_DOWN   &kp HOME        &none         &kp END          &trans
-&trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans                                                         &mo 2
+&trans  &trans  &trans  &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mo 2
+&trans  &trans  &trans  &trans  &trans                  &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &mo 3
+&trans  &trans  &trans  &trans  &trans                  &kp PAGE_DOWN   &kp HOME        &none         &kp END          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans
             >;
         };
 
         symbol_layer {
             label = "SYM";
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH     &kp DOLLAR    &kp PERCENT                   &kp AMPERSAND         &kp SQT            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
-&kp AT_SIGN      &kp DOLLAR         &kp PERCENT  &kp QUESTION  &kp MINUS                     &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp ASTERISK          &kp UNDERSCORE         &kp PLUS
-&kp LT           &kp GT             &kp PIPE     &kp COLON     &kp SEMICOLON                 &kp NON_US_BACKSLASH  &kp PLUS           &kp DOUBLE_QUOTES     &kp TILDE              &trans
-&trans           &trans             &trans       &trans        &trans         &trans  &mo 5  &mo 6                                                                                 &trans
+&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH     &kp DOLLAR    &kp PERCENT                    &kp AMPERSAND  &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS
+&kp AT_SIGN      &kp DOLLAR         &kp PERCENT  &kp QUESTION  &kp UNDERSCORE                 &kp SEMICOLON  &kp COLON         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp CARET
+&kp LT           &kp GT             &kp PIPE     &kp TILDE     &kp ASTERISK                   &kp COMMA      &kp PERIOD        &kp SLASH             &kp BACKSLASH          &trans
+&trans           &trans             &trans       &trans        &trans          &trans  &mo 5  &mo 6                                                                         &trans
             >;
         };
 
