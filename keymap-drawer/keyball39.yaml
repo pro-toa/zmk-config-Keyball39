@@ -28,7 +28,7 @@ layers:
   - B
   - N
   - M
-  - {t: ',', s: <}
+  - ','
   - {t: ., s: '>'}
   - {t: '$$mdi:keyboard-esc$$', h: MOUSE}
   - $$mdi:apple-keyboard-control$$
@@ -161,35 +161,35 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SYM:
-  - Sft+1
-  - Sft+2
-  - Sft+3
-  - Sft+4
-  - Sft+5
-  - Sft+6
-  - Sft+7
-  - Sft+8
-  - Sft+9
-  - {t: Sft+-, s: Sft+_}
-  - {t: '[', s: '{'}
-  - Sft+4
-  - Sft+5
-  - {t: Sft+/, s: 'Sft+?'}
-  - {t: Sft+\, s: Sft+|}
-  - {t: ',', s: <}
+  - '!'
+  - '"'
+  - '#'
+  - $
+  - '%'
+  - '&'
+  - ''''
+  - (
+  - )
+  - '='
+  - '@'
+  - $
+  - '%'
+  - '?'
+  - _
+  - ','
   - .
-  - {t: ']', s: '}'}
-  - {t: \, s: '|'}
-  - {t: '=', s: +}
+  - ']'
+  - \
+  - ^
   - <
   - '>'
   - '|'
-  - '#'
-  - {t: Sft+', s: Sft+"}
-  - {t: ',', s: <}
+  - '~'
+  - '*'
+  - ','
   - .
   - {t: /, s: '?'}
-  - {t: \, s: '|'}
+  - \
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -225,12 +225,12 @@ layers:
   - '1'
   - '2'
   - '3'
-  - {t: '=', s: +}
+  - ^
   - '0'
   - '1'
   - '2'
   - '3'
-  - {t: '=', s: +}
+  - ^
   - {t: ., s: '>'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
