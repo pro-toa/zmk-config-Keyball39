@@ -52,7 +52,7 @@
         };
 
         mouse_layer {
-            label = "MOUSE MODE";
+            label = "MOUSE";
             bindings = <
 &trans  &trans  &trans  &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mo 2
 &trans  &trans  &trans  &trans  &trans                  &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &mo 3
@@ -84,9 +84,9 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH     &kp DOLLAR    &kp PERCENT                    &kp AMPERSAND  &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS
-&kp AT_SIGN      &kp DOLLAR         &kp PERCENT  &kp QUESTION  &kp UNDERSCORE                 &kp SEMICOLON  &kp COLON         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp CARET
-&kp LT           &kp GT             &kp PIPE     &kp TILDE     &kp ASTERISK                   &kp COMMA      &kp PERIOD        &kp SLASH             &kp BACKSLASH          &trans
+&kp LS(NUMBER_1) &kp LS(NUMBER_2)   &kp LS(NUMBER_3) &kp LS(NUMBER_4) &kp LS(NUMBER_5)            &kp LS(NUMBER_6) &kp LS(NUMBER_7)  &kp LS(NUMBER_8)      &kp LS(NUMBER_9)       &kp LS(MINUS)
+&kp LEFT_BRACKET &kp LS(NUMBER_4)   &kp LS(NUMBER_5) &kp LS(SLASH) &kp LS(BACKSLASH)            &kp COMMA      &kp PERIOD        &kp RIGHT_BRACKET     &kp BACKSLASH          &kp EQUAL
+&kp LESS_THAN    &kp GREATER_THAN   &kp PIPE          &kp NON_US_HASH &kp LS(SINGLE_QUOTE)        &kp COMMA      &kp PERIOD        &kp SLASH             &kp BACKSLASH          &trans
 &trans           &trans             &trans       &trans        &trans          &trans  &mo 5  &mo 6                                                                         &trans
             >;
         };
