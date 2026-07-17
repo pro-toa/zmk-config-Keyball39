@@ -30,17 +30,17 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: '$$mdi:keyboard-esc$$', h: MOUSE MODE}
+  - {t: '$$mdi:keyboard-esc$$', h: MOUSE}
   - $$mdi:apple-keyboard-control$$
   - LEFT WIN
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-tab$$', h: MOUSE MODE}
+  - {t: '$$mdi:keyboard-tab$$', h: MOUSE}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '`', h: SYM, s: '~'}
-  MOUSE MODE:
+  MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -161,31 +161,31 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SYM:
-  - '!'
-  - '"'
-  - '#'
-  - $
-  - '%'
-  - '&'
-  - {t: '''', s: '"'}
-  - (
-  - )
-  - {t: '-', s: _}
-  - '@'
-  - $
-  - '%'
-  - '?'
-  - _
-  - {t: ;, s: ':'}
-  - ':'
+  - Sft+1
+  - Sft+2
+  - Sft+3
+  - Sft+4
+  - Sft+5
+  - Sft+6
+  - Sft+7
+  - Sft+8
+  - Sft+9
+  - {t: Sft+-, s: Sft+_}
   - {t: '[', s: '{'}
+  - Sft+4
+  - Sft+5
+  - {t: Sft+/, s: 'Sft+?'}
+  - {t: Sft+\, s: Sft+|}
+  - {t: ',', s: <}
+  - .
   - {t: ']', s: '}'}
-  - ^
+  - {t: \, s: '|'}
+  - {t: '=', s: +}
   - <
   - '>'
   - '|'
-  - '~'
-  - '*'
+  - '#'
+  - {t: Sft+', s: Sft+"}
   - {t: ',', s: <}
   - .
   - {t: /, s: '?'}
