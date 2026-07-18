@@ -226,31 +226,39 @@ parse_config:
     "&kp LS(NUMBER_8)": '('
     "&kp LS(NUMBER_9)": ')'
     "&kp LS(MINUS)": '='
-    "&kp JP_HYPHEN": '-'
-    "&kp JP_CARET": '^'
-    "&kp JP_AT": '@'
-    "&kp JP_LBKT": '['
-    "&kp JP_RBKT": ']'
-    "&kp JP_SEMICOLON": ';'
-    "&kp JP_COLON": ':'
-    "&kp JP_COMMA": ','
-    "&kp JP_PERIOD": '.'
-    "&kp JP_SLASH": '/'
-    "&kp LEFT_BRACKET": '@'
-    "&kp LS(SLASH)": '?'
-    "&kp LS(BACKSLASH)": '_'
-    "&kp COMMA": ','
-    "&kp PERIOD": '.'
-    "&kp RIGHT_BRACKET": ']'
-    "&kp BACKSLASH": "\\"
-    "&kp EQUAL": '^'
-    "&kp LESS_THAN": '<'
-    "&kp GREATER_THAN": '>'
-    "&kp JP_YEN": '¥'
-    "&kp JP_PIPE": '|'
-    "&kp JP_UNDERSCORE": '_'
-    "&kp NON_US_HASH": '~'
-    "&kp LS(SINGLE_QUOTE)": '*'
+    "&kp JP_HYPHEN":
+      type: '-'
+      shifted: '_'
+    "&kp JP_CARET":
+      type: '^'
+      shifted: '~'
+    "&kp JP_AT":
+      type: '@'
+      shifted: '`'
+    "&kp JP_LBKT":
+      type: '['
+      shifted: '{'
+    "&kp JP_RBKT":
+      type: ']'
+      shifted: '}'
+    "&kp JP_SEMICOLON":
+      type: ';'
+      shifted: '+'
+    "&kp JP_COLON":
+      type: ':'
+      shifted: '*'
+    "&kp JP_COMMA":
+      type: ','
+      shifted: '<'
+    "&kp JP_PERIOD":
+      type: '.'
+      shifted: '>'
+    "&kp JP_SLASH":
+      type: '/'
+      shifted: '?'
+    "&kp JP_YEN":
+      type: '¥'
+      shifted: '|'
 
     # Bluetooth
     "&bt BT_SEL 0":

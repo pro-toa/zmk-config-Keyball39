@@ -25,7 +25,6 @@
 #define JP_PERIOD       0x37
 #define JP_SLASH        0x38
 #define JP_YEN          0x89
-#define JP_PIPE         LS(0x89)
 #define JP_UNDERSCORE   LS(0x87)
 
 &lt {
@@ -99,10 +98,10 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-&kp LS(NUMBER_1) &kp LS(NUMBER_2)   &kp LS(NUMBER_3) &kp LS(NUMBER_4)     &kp LS(NUMBER_5)                  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp JP_HYPHEN
-&kp JP_AT        &kp JP_YEN         &kp LS(NUMBER_5) &kp LS(SLASH)        &kp JP_UNDERSCORE                 &kp COMMA         &kp PERIOD        &kp JP_LBKT       &kp JP_RBKT       &kp EQUAL
-&kp LESS_THAN    &kp GREATER_THAN   &kp JP_PIPE      &kp NON_US_HASH &kp  LS(SINGLE_QUOTE)                  &kp COMMA         &kp PERIOD        &kp SLASH         &kp JP_YEN        &trans
-&trans           &trans             &trans           &trans               &trans             &trans  &mo 5  &mo 6                                                                   &trans
+&kp LS(N1)     &kp LS(N2)        &kp LS(N3)      &kp LS(N4)        &kp LS(N5)                           &kp LS(N6)        &kp LS(N7)    &kp LS(N8)   &kp LS(N9)   &kp JP_HYPHEN
+&kp JP_AT      &kp JP_YEN        &kp LS(N5)      &kp LS(SLASH)     &kp JP_UNDERSCORE                    &kp JP_SEMICOLON  &kp JP_COLON  &kp JP_LBKT  &kp JP_RBKT  &kp JP_CARET
+&kp LESS_THAN  &kp GREATER_THAN  &kp LS(JP_YEN)  &kp LS(JP_CARET)  &kp LS(SINGLE_QUOTE)                 &kp COMMA         &kp PERIOD    &kp SLASH    &kp JP_YEN   &trans
+&trans         &trans            &trans          &trans            &trans                &trans  &mo 5  &mo 6                                                     &trans
             >;
         };
 
