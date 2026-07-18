@@ -265,6 +265,12 @@ parse_config:
     "&kp JP_SLASH":
       tap: '/'
       shifted: '?'
+    "&kp LS(SLASH)":
+      tap: '/'
+      shifted: '?'
+    "&kp LS(SINGLE_QUOTE)":
+      tap: "'"
+      shifted: '"'
     "&kp JP_YEN":
       tap: '¥'
       shifted: '|'
