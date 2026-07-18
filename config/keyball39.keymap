@@ -40,17 +40,14 @@
 
 / {
     behaviors {
-        toggle_mouse_layer: toggle_mouse_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "toggle_mouse_layer";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <150>;
-            bindings = <&tog>, <&kp>;
+        shift_backspace_delete: shift_backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "shift_backspace_delete";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -59,8 +56,8 @@
             bindings = <
 &kp Q      &kp W         &kp E     &kp R      &kp T                                            &kp Y          &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D     &kp F      &kp G                                            &kp H          &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C     &kp V      &kp B                                            &kp N          &kp M  &kp COMMA  &kp DOT  &toggle_mouse_layer 1 ESCAPE
-&kp LCTRL  &kp LEFT_WIN  &kp LALT  &kp LSHFT  &kp SPACE  &toggle_mouse_layer 1 TAB  &kp ENTER  &kp BACKSPACE                             &lt 4 GRAVE
+&kp Z      &kp X         &kp C     &kp V      &kp B                                            &kp N          &kp M  &kp COMMA  &kp DOT  &kp ESCAPE
+&kp LCTRL  &kp LEFT_WIN  &kp LALT  &kp LSHFT  &kp SPACE  &kp TAB  &kp ENTER  &shift_backspace_delete                                     &lt 4 GRAVE
             >;
         };
 
