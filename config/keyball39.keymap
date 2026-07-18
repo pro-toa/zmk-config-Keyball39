@@ -68,7 +68,7 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mo 0
+&trans  &trans  &trans  &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &to 0
 &trans  &trans  &trans  &trans  &trans                  &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &mo 2
 &trans  &trans  &trans  &trans  &trans                  &kp PAGE_DOWN   &kp HOME        &none         &kp END          &mo 3
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans
