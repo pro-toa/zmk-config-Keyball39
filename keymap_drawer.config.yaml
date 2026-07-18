@@ -217,14 +217,23 @@ parse_config:
 
     # Symbol layer display fixes
     "&kp LS(N1)": '!'
+    "&kp LS(NUMBER_1)": '!'
     "&kp LS(N2)": '"'
+    "&kp LS(NUMBER_2)": '"'
     "&kp LS(N3)": '#'
+    "&kp LS(NUMBER_3)": '#'
     "&kp LS(N4)": '$'
+    "&kp LS(NUMBER_4)": '$'
     "&kp LS(N5)": '%'
+    "&kp LS(NUMBER_5)": '%'
     "&kp LS(N6)": '&'
+    "&kp LS(NUMBER_6)": '&'
     "&kp LS(N7)": "'"
+    "&kp LS(NUMBER_7)": "'"
     "&kp LS(N8)": '('
+    "&kp LS(NUMBER_8)": '('
     "&kp LS(N9)": ')'
+    "&kp LS(NUMBER_9)": ')'
     "&kp LS(MINUS)": '='
     "&kp JP_HYPHEN":
       tap: '-'
@@ -262,6 +271,9 @@ parse_config:
     "&kp LS(JP_YEN)":
       tap: '|'
       shifted: '¥'
+    "&kp LS(0x87)":
+      tap: '_'
+      shifted: '—'
     "&kp LS(JP_CARET)":
       tap: '~'
       shifted: '^'
