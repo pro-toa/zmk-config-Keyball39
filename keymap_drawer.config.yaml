@@ -217,7 +217,7 @@ parse_config:
 
     "&shift_backspace_delete":
       tap: $$mdi:backspace$$
-      shifted: $$mdi:apple-keyboard-shift$$ + $$mdi:backspace-reverse-outline$$
+      shifted: $$mdi:backspace-reverse-outline$$
 
     # Symbol layer display fixes
     "&kp LS(N1)": '!'
