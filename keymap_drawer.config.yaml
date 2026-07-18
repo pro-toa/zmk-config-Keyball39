@@ -265,9 +265,7 @@ parse_config:
     "&kp JP_SLASH":
       tap: '/'
       shifted: '?'
-    "&kp LS(SLASH)":
-      tap: '/'
-      shifted: '?'
+    "&kp LS(SLASH)": '?'
     "&kp LS(SINGLE_QUOTE)":
       tap: "'"
       shifted: '"'
