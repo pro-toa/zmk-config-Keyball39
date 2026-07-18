@@ -13,6 +13,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+#define JP_YEN          0x89
+#define JP_PIPE         LS(0x89)
+#define JP_UNDERSCORE   LS(0x87)
+
 &lt {
     tapping-term-ms = <200>;
     flavor = "hold-preferred";
@@ -54,9 +58,9 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mo 2
-&trans  &trans  &trans  &trans  &trans                  &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &mo 3
-&trans  &trans  &trans  &trans  &trans                  &kp PAGE_DOWN   &kp HOME        &none         &kp END          &trans
+&trans  &trans  &trans  &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mo 0
+&trans  &trans  &trans  &trans  &trans                  &kp PAGE_UP     &mkp LCLK       &mkp MCLK     &mkp RCLK        &mo 2
+&trans  &trans  &trans  &trans  &trans                  &kp PAGE_DOWN   &kp HOME        &none         &kp END          &mo 3
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans
             >;
         };
@@ -85,8 +89,8 @@
             label = "SYM";
             bindings = <
 &kp LS(NUMBER_1) &kp LS(NUMBER_2)   &kp LS(NUMBER_3) &kp LS(NUMBER_4) &kp LS(NUMBER_5)            &kp LS(NUMBER_6) &kp LS(NUMBER_7)  &kp LS(NUMBER_8)      &kp LS(NUMBER_9)       &kp LS(MINUS)
-&kp LEFT_BRACKET &kp LS(NUMBER_4)   &kp LS(NUMBER_5) &kp LS(SLASH) &kp LS(BACKSLASH)            &kp COMMA      &kp PERIOD        &kp RIGHT_BRACKET     &kp BACKSLASH          &kp EQUAL
-&kp LESS_THAN    &kp GREATER_THAN   &kp PIPE          &kp NON_US_HASH &kp LS(SINGLE_QUOTE)        &kp COMMA      &kp PERIOD        &kp SLASH             &kp BACKSLASH          &trans
+&kp LEFT_BRACKET &kp LS(NUMBER_4)   &kp LS(NUMBER_5) &kp LS(SLASH) &kp JP_UNDERSCORE           &kp COMMA      &kp PERIOD        &kp RIGHT_BRACKET    &kp BACKSLASH                &kp EQUAL
+&kp LESS_THAN    &kp GREATER_THAN   &kp JP_PIPE      &kp NON_US_HASH &kp LS(SINGLE_QUOTE)       &kp COMMA      &kp PERIOD        &kp SLASH             &kp JP_YEN             &trans
 &trans           &trans             &trans       &trans        &trans          &trans  &mo 5  &mo 6                                                                         &trans
             >;
         };

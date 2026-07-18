@@ -236,7 +236,9 @@ parse_config:
     "&kp EQUAL": '^'
     "&kp LESS_THAN": '<'
     "&kp GREATER_THAN": '>'
-    "&kp PIPE": '|'
+    "&kp JP_YEN": '¥'
+    "&kp JP_PIPE": '|'
+    "&kp JP_UNDERSCORE": '_'
     "&kp NON_US_HASH": '~'
     "&kp LS(SINGLE_QUOTE)": '*'
 
