@@ -38,7 +38,7 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', s: '$$mdi:apple-keyboard-shift$$ + $$mdi:backspace-reverse-outline$$'}
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '`', h: SYM, s: '~'}
   MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
