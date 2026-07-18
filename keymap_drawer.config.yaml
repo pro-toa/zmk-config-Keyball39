@@ -216,49 +216,55 @@ parse_config:
       shifted: $$mdi:backspace-reverse-outline$$
 
     # Symbol layer display fixes
-    "&kp LS(NUMBER_1)": '!'
-    "&kp LS(NUMBER_2)": '"'
-    "&kp LS(NUMBER_3)": '#'
-    "&kp LS(NUMBER_4)": '$'
-    "&kp LS(NUMBER_5)": '%'
-    "&kp LS(NUMBER_6)": '&'
-    "&kp LS(NUMBER_7)": "'"
-    "&kp LS(NUMBER_8)": '('
-    "&kp LS(NUMBER_9)": ')'
+    "&kp LS(N1)": '!'
+    "&kp LS(N2)": '"'
+    "&kp LS(N3)": '#'
+    "&kp LS(N4)": '$'
+    "&kp LS(N5)": '%'
+    "&kp LS(N6)": '&'
+    "&kp LS(N7)": "'"
+    "&kp LS(N8)": '('
+    "&kp LS(N9)": ')'
     "&kp LS(MINUS)": '='
     "&kp JP_HYPHEN":
-      type: '-'
+      tap: '-'
       shifted: '_'
     "&kp JP_CARET":
-      type: '^'
+      tap: '^'
       shifted: '~'
     "&kp JP_AT":
-      type: '@'
+      tap: '@'
       shifted: '`'
     "&kp JP_LBKT":
-      type: '['
+      tap: '['
       shifted: '{'
     "&kp JP_RBKT":
-      type: ']'
+      tap: ']'
       shifted: '}'
     "&kp JP_SEMICOLON":
-      type: ';'
+      tap: ';'
       shifted: '+'
     "&kp JP_COLON":
-      type: ':'
+      tap: ':'
       shifted: '*'
     "&kp JP_COMMA":
-      type: ','
+      tap: ','
       shifted: '<'
     "&kp JP_PERIOD":
-      type: '.'
+      tap: '.'
       shifted: '>'
     "&kp JP_SLASH":
-      type: '/'
+      tap: '/'
       shifted: '?'
     "&kp JP_YEN":
-      type: '¥'
+      tap: '¥'
       shifted: '|'
+    "&kp LS(JP_YEN)":
+      tap: '|'
+      shifted: '¥'
+    "&kp LS(JP_CARET)":
+      tap: '~'
+      shifted: '^'
 
     # Bluetooth
     "&bt BT_SEL 0":
