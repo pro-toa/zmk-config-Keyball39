@@ -44,7 +44,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "shift_backspace_delete";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            bindings = <&kp BACKSPACE>, <&kp LS(DELETE)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
