@@ -13,7 +13,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-# --- jp JIS symbols ---
+/* jp JIS symbols */
 #define JP_HYPHEN       0x2D
 #define JP_CARET        0x2E
 #define JP_AT           0x2F
