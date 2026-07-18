@@ -215,6 +215,10 @@ parse_config:
       tap: $$mdi:backspace$$
       shifted: $$mdi:backspace-reverse-outline$$
 
+    "&shift_backspace_delete":
+      tap: "Bksp"
+      shifted: "S+Del"
+
     # Symbol layer display fixes
     "&kp LS(N1)": '!'
     "&kp LS(NUMBER_1)": '!'
