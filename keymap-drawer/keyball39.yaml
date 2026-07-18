@@ -28,7 +28,7 @@ layers:
   - B
   - N
   - M
-  - ','
+  - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: '$$mdi:keyboard-esc$$', h: MOUSE}
   - $$mdi:apple-keyboard-control$$
@@ -161,35 +161,35 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SYM:
-  - '!'
-  - '"'
-  - '#'
-  - $
-  - '%'
-  - '&'
-  - ''''
-  - (
-  - )
-  - '-'
-  - '@'
-  - ¥
-  - '%'
-  - '?'
-  - _
-  - ','
-  - .
-  - '['
-  - ']'
-  - ^
+  - {t: Sft+1, s: Sft+!}
+  - {t: Sft+2, s: Sft+@}
+  - {t: Sft+3, s: Sft+#}
+  - {t: Sft+4, s: Sft+$}
+  - {t: Sft+5, s: Sft+%}
+  - {t: Sft+6, s: Sft+^}
+  - {t: Sft+7, s: Sft+&}
+  - {t: Sft+8, s: Sft+*}
+  - {t: Sft+9, s: Sft+(}
+  - {s: _, type: '-'}
+  - {s: '`', type: '@'}
+  - {s: '|', type: ¥}
+  - {t: Sft+5, s: Sft+%}
+  - {t: Sft+/, s: 'Sft+?'}
+  - Sft+0x87
+  - {s: +, type: ;}
+  - {s: '*', type: ':'}
+  - {s: '{', type: '['}
+  - {s: '}', type: ']'}
+  - {s: '~', type: ^}
   - <
   - '>'
-  - '|'
-  - '~'
-  - '*'
-  - ','
+  - Sft+0x89
+  - Sft+0x2E
+  - {t: Sft+', s: Sft+"}
+  - {t: ',', s: <}
   - .
   - {t: /, s: '?'}
-  - ¥
+  - {s: '|', type: ¥}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -225,12 +225,12 @@ layers:
   - '1'
   - '2'
   - '3'
-  - ^
+  - {t: '=', s: +}
   - '0'
   - '1'
   - '2'
   - '3'
-  - ^
+  - {t: '=', s: +}
   - {t: ., s: '>'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
