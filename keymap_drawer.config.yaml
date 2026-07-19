@@ -257,9 +257,11 @@ parse_config:
     "&kp JP_SEMICOLON":
       tap: ';'
       shifted: '+'
+    "&kp LS(JP_SEMICOLON)": '+'
     "&kp JP_COLON":
       tap: ':'
       shifted: '*'
+    "&kp LS(JP_COLON)": '*'
     "&kp JP_COMMA":
       tap: ','
       shifted: '<'
