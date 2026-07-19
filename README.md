@@ -1,4 +1,4 @@
-This keeb created by a group of people who loves keyball.
+このキーボードは、Keyball 39 をベースに、トラックボール操作と日本語入力・JIS 配列を意識したカスタマイズを加えたものです。
 
 Special Thanks to: <br>
 PCB: *[yangxing844](https://github.com/yangxing844)* <br>
@@ -7,35 +7,38 @@ Firmware: *[Amos698](https://github.com/Amos698)* <br>
 
 <img src="keymap-drawer/keyball39.svg" >
 
-## Keymap notes
+## キーマップのポイント
 
-### Base layer
+### ベースレイヤー
 
-- `MAIN`: The default QWERTY layer.
-  - Includes separate positions for `Ctrl`, `Shift`, `Win`, and `Esc`.
-    - This allows key combinations such as `Ctrl + Shift + Esc` and `Win + L`.
-  - Provides `Left Alt + Grave` for switching between Japanese and English input.
-  - Places `MINUS` on the rightmost key of the home row for typing a hyphen with a Japanese keyboard layout.
+- `MAIN`: デフォルトの英字レイヤーです。
+  - `Ctrl`、`Shift`、`Win`、`Esc` を別々の位置に配置しています。
+    - これにより `Ctrl + Shift + Esc` や `Win + L` のような組み合わせを使いやすくしています。
+  - 日本語/英語入力切替用として、左 `Alt` + `Grave` で切り替えられるようにしています。
+  - JIS 配列を意識して、ホームポジションの右端に `MINUS` を配置しています。
+  - `Backspace` と `Delete` の役割を切り替えられるようにしています。
+    - 通常は `Delete`、長押し時には `Backspace` として動作します。
 
-### Trackball layers
+### トラックボールレイヤー
 
-- `MOUSE`: Activates automatically when the PMW3610 trackball moves and remains active for 700 ms after the last movement.
-  - Provides left, middle, and right mouse buttons on both halves.
-  - Provides arrow keys, Page Up, Page Down, Home, and End on the right half.
-  - Allows the right half to be used by itself as a trackball and navigation device.
-- `SCROLL`: From `MOUSE`, hold the `F` position to use trackball movement for scrolling instead of pointer movement.
-  - Vertical ball movement scrolls vertically, and horizontal ball movement scrolls horizontally.
-- `SNIPE`: From `MOUSE`, hold the `G` position to reduce the trackball sensitivity for precise pointer movement.
-  - Useful for selecting small targets and making fine cursor adjustments.
+- `MOUSE`: PMW3610 トラックボールを素早く動かすと自動で有効化されます。
+  - ほぼ半永久的に継続し、`MAIN` に戻るには `MAIN` キーを押す必要があります。
+  - 左半分は `MAIN` のままです。
+  - 右半分ではトラックボールとナビゲーション操作を組み合わせて使えるようにしています。
+    - 矢印キー、Page Up、Page Down、Home、End も使えます。
+- `SCROLL`: `MOUSE` から `SCROLL` の位置を長押しすると、ポインタ移動ではなくスクロール操作に切り替えられます。
+  - ボールの縦移動で上下スクロール、横移動で左右スクロールできます。
+- `SNIPE`: `MOUSE` から `SNIPE` の位置を長押しすると、トラックボール感度を下げて細かいカーソル移動がしやすくなります。
+  - 小さい対象の選択や微調整に便利です。
 
-### Keyboard layers
+### キーボードレイヤー
 
-The `Esc`/`SYM` hold-tap uses the `hold-preferred` behavior. Pressing another key while holding `Esc` activates `SYM` immediately, without waiting for the 240 ms tapping term to expire. This makes it possible to continue directly to `NUM` or `FN` as part of the same key sequence, without waiting for `SYM` to activate first.
+`Esc` / `SYM` のホールドタップは `hold-preferred` 動作を使っています。`Esc` を押しながら別のキーを入力すると、タップの 100 ms 待機を待たずに `SYM` をすぐに有効にできます。これにより、`SYM` を経由せずにそのまま `NUM` や `FN` に進めます。
 
-- `SYM`: Hold `Esc` to access symbols, operators, and brackets.
-- `NUM`: From `SYM`, hold the `Enter` position to activate matching number pads on both halves.
-  - Each number pad contains `0`–`9`, arithmetic operators, a decimal point, and an equals sign.
-- `FN`: From `SYM`, hold the `Backspace` position to access `F1`–`F12` on either half.
-- `SYS`: From `FN`, hold the right `Shift` position to access Bluetooth profile selection and pairing-data removal.
-
-Accessing `SYS` requires the `SYM` → `FN` → `SYS` sequence, which helps prevent accidental Bluetooth configuration changes.
+- `SYM`: `Esc` を長押しすると、記号・演算子・括弧を扱うレイヤーに入ります。
+- `NUM`: `SYM` から `Enter` の位置を長押しすると、左右両側に数字パッドを出せます。
+  - 各パッドには `0`–`9`、四則演算、小数点、イコール記号を配置しています。
+- `FN`: `SYM` から `Backspace` の位置を長押しすると、`F1`–`F12` を左右どちらからでも使えるようになります。
+- `SYS`: `FN` から右側の `Shift` を長押しすると、Bluetooth プロファイル切替やペアリングデータ削除に入れます。
+  - 複数の機器への接続切替を素早く行えます。
+- `SYS` には `SYM` → `FN/NUM` → `SYS` の順で入るようにしており、Bluetooth 設定を誤って変更しにくくしています。
