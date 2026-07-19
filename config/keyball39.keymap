@@ -28,11 +28,11 @@
 
 /*
  * Hold-tap の共通値:
- * - tapping-term-ms: 長押しとみなすまでの時間 (200ms)
- * - quick-tap-ms: すぐ離した時の短押し判定を少しだけ安全にする余裕 (150ms)
+ * - tapping-term-ms: 長押しとみなすまでの時間 (ms)
+ * - quick-tap-ms: すぐ離した時の短押し判定を少しだけ安全にする余裕 (ms)
  */
-#define HOLD_TAP_TAPPING_TERM_MS  200
-#define HOLD_TAP_QUICK_TAP_MS    150
+#define HOLD_TAP_TAPPING_TERM_MS  100
+#define HOLD_TAP_QUICK_TAP_MS    50
 
 /*
  * lt: 既存のレイヤー切替用behaviorsの拡張
