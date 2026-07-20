@@ -241,7 +241,7 @@ parse_config:
     "&kp LS(MINUS)": '='
     "&kp JP_HYPHEN":
       tap: '-'
-      shifted: '_'
+      shifted: '='
     "&kp JP_CARET":
       tap: '^'
       shifted: '~'
@@ -278,12 +278,8 @@ parse_config:
     "&kp JP_YEN":
       tap: '¥'
       shifted: '|'
-    "&kp LS(JP_YEN)":
-      tap: '|'
-      shifted: '¥'
-    "&kp LS(0x87)":
-      tap: '_'
-      shifted: '—'
+    "&kp LS(JP_YEN)": '|'
+    "&kp LS(0x87)": '_'
     "&kp LS(JP_CARET)":
       tap: '~'
       shifted: '^'
